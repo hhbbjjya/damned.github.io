@@ -105,14 +105,14 @@
 <br>     
 <br>
 <br>
-        {% if name == "" %}
-	<form method="post">
-		<input type="text" name="user">
-		<input type="submit" name="send" value="送出">
-	</form>
-	{% else %}
-	<p>{{name}}</p>
-	{% endif %}
+{% if name == "" %}
+<form method="post">
+	<input type="text" name="user">
+	<input type="submit" name="send" value="送出">
+</form>
+{% else %}
+<p>{{name}}</p>
+{% endif %}
 <br>
 <br>
 <br>
