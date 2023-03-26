@@ -105,15 +105,7 @@
 <br>     
 <br>
 <br>
-{% if name == "" %}
-<form method="post">
-	<input type="text" name="user">
-	<input type="submit" name="send" value="送出">
-</form>
-{% else %}
-<p>{{name}}</p>
-{% endif %}
-<br>
+
 <br>
 <br>
 <hr/>
@@ -202,11 +194,20 @@
          </div>
          <div class="row">
          <div class="col-md-8 offset-md-2 text-left">		
-         <p>讓我們有最新消息立刻通知你！</p>        		  	
+         <p>輸入你今天吃了甚麼，越詳細越好</p>        		  	
            <div class="input-group input-group-lg">
-           <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="你的電郵">
+           
+		{% if name == "" %}
+		<form method="post">
+			<input type="text" name="user" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="你今日的飲食">
+			<input type="submit" name="send" value="送出">
+		</form>
+		{% else %}
+		<p>{{name}}</p>
+		{% endif %}
+		<br>
          </div>
-         <a class="btn btn-primary btn-lg" href="#" role="button">提交</a>
+<!--          <a class="btn btn-primary btn-lg" href="#" role="button">提交</a> -->
          </div>
          </div>
        </div>
