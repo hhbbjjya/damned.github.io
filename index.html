@@ -102,16 +102,21 @@
         <li><i class="icon-pencil"></i> By&nbsp;  網上蒐集的資料　Zheng&Bryan</li>
       </ul>
 
-      
+<br>     
 <br>
 <br>
-<py-script src="finally.py">
-print("hello")
-</py-script>
+        {% if name == "" %}
+	<form method="post">
+		<input type="text" name="user">
+		<input type="submit" name="send" value="送出">
+	</form>
+	{% else %}
+	<p>{{name}}</p>
+	{% endif %}
 <br>
 <br>
 <br>
-<hr>
+<hr/>
 <!--footer-->
 
        <!--分隔線分隔線-->
